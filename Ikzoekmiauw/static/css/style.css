@@ -56,6 +56,18 @@ nav a{
     margin: 0.3rem;
 }
 
+@media (min-width: 720px){
+    #menuicon{
+        display: none;
+    }
+}
+
+@media (max-width:720px){
+    .w3-hide-small{
+        display:none !important
+    }
+}
+
 
 /* Styling of the footer */
 footer {
