@@ -37,7 +37,13 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
-    "Adoptie.apps.AdoptieConfig",
+    "rest_framework",
+    "rest_framework.authtoken",
+    "djoser",
+    'account',
+    'contact',
+    'katalogus',
+    'layout',
 ]
 
 MIDDLEWARE = [
@@ -52,10 +58,11 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = "Ikzoekmiauw.urls"
 
+#  Added the templates directory to the DIRS list
 TEMPLATES = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",
-        "DIRS": [],
+        "DIRS": ['templates'],
         "APP_DIRS": True,
         "OPTIONS": {
             "context_processors": [
@@ -118,7 +125,40 @@ USE_TZ = True
 
 STATIC_URL = "static/"
 
+STATICFILES_DIRS = [
+    # "adoptie/static"
+]
+
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
+
+REST_FRAMEWORK = {
+    # Activates the possibility of searching and ordering API results
+    'DEFAULT_FILTER_BACKENDS': [
+        'rest_framework.filters.OrderingFilter',
+        'rest_framework.filters.SearchFilter',
+    ],
+    # Defines how many instances of a class are given in the APIs
+    'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
+    'PAGE_SIZE' : 6,
+    
+    # Authentication
+    'DEFAULT_AUTHENTICATION_CLASSES': [
+        'rest_framework.authentication.TokenAuthentication',
+        # This is only for Djoser 
+        'rest_framework.authentication.SessionAuthentication'
+    ],
+    
+    # Throttling for preventing malicious requests 
+    # 'DEFAULT_THROTTLE_RATES': {
+    #     'anon': '2/minute',
+    #     'user': '5/minute',
+    # }
+}
+
+# Djoser is an extention of the Django Rest Framework for authentication
+DJOSER = {
+    "USER_ID_FIELD" : "username",
+}
