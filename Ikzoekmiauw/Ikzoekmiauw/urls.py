@@ -18,5 +18,16 @@ from django.contrib import admin
 from django.urls import path, include
 
 urlpatterns = [
+    # Admin page
     path("admin/", admin.site.urls),
+    
+    # Djoser endpoints for authentication api
+    path('auth/', include('djoser.urls')),
+    path('auth/', include('djoser.urls.authtoken')),
+    
+    # Paths for the different apps
+    path("", include("layout.urls")),
+    path("katalogus/", include("katalogus.urls")),
+    path("contact/", include("contact.urls")),
+    path("account/", include("account.urls")),
 ]

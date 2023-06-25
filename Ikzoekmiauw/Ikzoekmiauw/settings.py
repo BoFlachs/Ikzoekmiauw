@@ -62,7 +62,12 @@ ROOT_URLCONF = "Ikzoekmiauw.urls"
 TEMPLATES = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",
-        "DIRS": ['templates'],
+        "DIRS": ['templates',
+                 'account/templates',
+                 'contact/templates',
+                 'katalogus/templates',
+                 'layout/templates',
+                 ],
         "APP_DIRS": True,
         "OPTIONS": {
             "context_processors": [
@@ -126,7 +131,11 @@ USE_TZ = True
 STATIC_URL = "static/"
 
 STATICFILES_DIRS = [
-    # "adoptie/static"
+    "static",
+    "account/static",
+    "contact/static",
+    "katalogus/static",
+    "layout/static",
 ]
 
 # Default primary key field type

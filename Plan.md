@@ -50,7 +50,9 @@
 
 ### File structure
 - static
-    - contains images and css files
+    - contains general images and css files
+- \<app\>/static
+    - contains the specific css and img for that app
 - templates
     - contains base.html
 - templates/partials
@@ -80,4 +82,4 @@
 
 
 ## To do list
-- 
+- Add meta data to base.html

@@ -1,0 +1,29 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Bo Flachs">
+    
+    <title>Ikzoekmiauw</title>
+
+    <link 
+        rel="preload" 
+        as="style" 
+        href="{% static 'css/style.css' %}"
+        onload="this.rel = 'stylesheet'">
+</head>
+<body>
+    {% comment %} Include the header template {% endcomment %}
+    {% include 'partials/_header.html' %}
+
+    <main>
+        {% block content %} {% endblock %}
+    </main>
+    {% comment %} Include the footer template {% endcomment %}
+    {% include 'partials/_footer.html' %}
+</body>
+</html>
+
