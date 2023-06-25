@@ -1,13 +1,67 @@
 {% load static %}
 
-<header>
+<header class="w3-container">
     <p>This is the header</p>
 </header>
-<nav>
-    <ul>
-        <li>Navbar</li>
-        <li>Navbar</li>
-        <li>Navbar</li>
-        <li>Navbar</li>
-    </ul>
-</nav>
+{% with request.resolver_match.url_name as url_name %}
+    <nav class="w3-bar w3-theme">
+        <a  href="/" 
+            class="w3-bar-item w3-button w3-hover-theme
+            {% if url_name == 'home' %}w3-theme-d1{% endif %}">
+            Ikzoekmiauw</a>
+        <a  href="#" 
+            class="w3-bar-item w3-button w3-hide-small w3-hover-theme
+            {% if url_name == 'katalogus' %}w3-theme-d1{% endif %}">
+            Katalogus</a>
+        <a  href="#" 
+            class="w3-bar-item w3-button w3-hide-small w3-hover-theme
+            {% if url_name == 'ditjesEnKatjes' %}w3-theme-d1{% endif %}">
+            Ditjes en Katjes</a>
+        {% comment %} <a  href="#" 
+            class="w3-bar-item w3-button w3-hide-small w3-hover-theme
+            {% if url_name == 'account' %}w3-red{% endif %}">
+            Mijn account</a> {% endcomment %}
+        <a  href="#" 
+            class="w3-bar-item w3-button w3-hide-small w3-hover-theme
+            {% if url_name == 'contact' %}w3-theme-d1{% endif %}">
+            Contact</a>
+        <a  href="#" 
+            class="w3-bar-item w3-button w3-hide-small
+                   w3-right login-logout">
+            Login</a>
+        <a  href="javascript:void(0)" 
+            class="w3-bar-item w3-button w3-right w3-hover-theme w3-hide-large w3-hide-medium" 
+            onclick="collapseMenu()">&#9776;</a>
+    </nav>
+
+    <div id="mobile-menu" class="w3-bar-block w3-theme w3-hide w3-hide-large w3-hide-medium"> 
+        <a  href="#" 
+            class="w3-bar-item w3-button w3-hover-theme
+            {% if url_name == 'katalogus' %}w3-theme-d1{% endif %}">
+            Katalogus</a>
+        <a  href="#" 
+            class="w3-bar-item w3-button w3-hover-theme
+            {% if url_name == 'ditjesEnKatjes' %}w3-theme-d1{% endif %}">
+            Ditjes en Katjes</a>
+        {% comment %} <a  href="#" 
+            class="w3-bar-item w3-button w3-hover-theme
+            {% if url_name == 'account' %}w3-red{% endif %}">
+            Mijn account</a> {% endcomment %}
+        <a  href="#" 
+            class="w3-bar-item w3-button w3-hover-theme
+            {% if url_name == 'contact' %}w3-theme-d1{% endif %}">
+            Contact</a>
+    </div>
+{% endwith %}
+
+<script>
+    function collapseMenu() {
+      var x = document.getElementById("mobile-menu");
+      if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+      } else { 
+        x.className = x.className.replace(" w3-show", "");
+      }
+    }
+</script>
+

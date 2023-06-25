@@ -9,17 +9,25 @@
     
     <title>Ikzoekmiauw</title>
 
-    <link 
+    {% comment %} The w3.css stylesheet {% endcomment %}
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    {% comment %} Color theme {% endcomment %}
+    <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-light-blue.css">
+   
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
+    {% comment %} My own stylesheet that has precedence over the above {% endcomment %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    {% comment %} <link 
         rel="preload" 
         as="style" 
         href="{% static 'css/style.css' %}"
-        onload="this.rel = 'stylesheet'">
+        onload="this.rel = 'stylesheet'"> {% endcomment %}
 </head>
 <body>
     {% comment %} Include the header template {% endcomment %}
     {% include 'partials/_header.html' %}
 
-    <main>
+    <main class="w3-container">
         {% block content %} {% endblock %}
     </main>
     {% comment %} Include the footer template {% endcomment %}
