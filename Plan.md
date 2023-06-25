@@ -42,17 +42,42 @@
 ## Technical structure
 ### App structure
 - Layout app
+    - Contains the home page view
+    - Contains the 
 - Katalogus app
 - Account app
 - Contact app
 
+### File structure
+- static
+    - contains images and css files
+- templates
+    - contains base.html
+- templates/partials
+    - contains header, footer files
+- \<app\>/templates
+    - contains the specific html files for that app
+
+
 ### Database structure
+- User (built-in)
+    - pk: id
+- Cat
+    - pk: id
+    - All the properties a cat can have
+- Contact form
+    - pk: id
+    - email
+    - name
+    - question
+- Profile
+    - https://dev.to/earthcomfy/django-user-profile-3hik
+    - one-to-one: user
+    - all the profile records
+    - one-to-many: favorite cats
+    - etc.
+
 
 
 ## To do list
-- Make a plan
-- Implement general app structure
-- Add the w3.css classes
-- Design a footer
-- Design a header
-- Design the nav-bar
+- 
