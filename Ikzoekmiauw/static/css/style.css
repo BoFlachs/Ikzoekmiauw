@@ -7,24 +7,27 @@ body {
     font-family: Georgia, serif;
 }
 
+
 /* Header styling */
 header {
-    display: inline-flex;
     background-color:#1b7a9f ;
 }
 
 #banner {
     text-align: center;
     font-family: 'Tangerine', serif;
-    font-size: 4rem;
-    font-style: bold;
+    font-size: 5rem;
+    font-weight: bolder;
 }
 
-header img {
+/* header img {
     max-width: 15%;
     float: right;
     border-radius: 30px;
-}
+    object-fit: contain;
+    margin: 10px;
+    margin-top: 4px;
+} */
 
 /* Navbar styling */
 .w3-hover-theme:hover {
@@ -95,7 +98,7 @@ footer .row a i{
     margin:0% 1%;
     }
 
-@media (max-width:601px){
+@media (max-width:720px){
     footer{
         padding:5%;
         }
