@@ -1,6 +1,36 @@
+/* General styling */
+a {
+    text-decoration: none;
+}
 
+body {
+    font-family: Georgia, serif;
+}
 
-.w3-hover-theme:hover {color:#000 !important; background-color:#a1d9ef !important}
+/* Header styling */
+header {
+    display: inline-flex;
+    background-color:#1b7a9f ;
+}
+
+#banner {
+    text-align: center;
+    font-family: 'Tangerine', serif;
+    font-size: 4rem;
+    font-style: bold;
+}
+
+header img {
+    max-width: 15%;
+    float: right;
+    border-radius: 30px;
+}
+
+/* Navbar styling */
+.w3-hover-theme:hover {
+    color:#000 !important; 
+    background-color:#a1d9ef !important
+}
 
 .login-logout {
     border-radius: 25px;
@@ -13,10 +43,18 @@
     background-color:#2aa9db !important
 }
 
-a {
-    text-decoration: none;
+nav {
+    font-size: large;
+    margin-top: -6px;
 }
 
+nav a{
+    border-radius: 25px;
+    margin: 0.3rem;
+}
+
+
+/* Styling of the footer */
 footer {
     position: fixed;
     left: 0;
@@ -59,13 +97,11 @@ footer .row a i{
 
 @media (max-width:601px){
     footer{
-        /* text-align:left; */
         padding:5%;
         }
     footer .row ul li{
         display:block;
         margin:10px 0px;
-        /* text-align:left; */
         }
     footer .row a i{
         margin:0% 3%;

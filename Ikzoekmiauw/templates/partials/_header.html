@@ -1,7 +1,8 @@
 {% load static %}
 
-<header class="w3-container">
-    <p>This is the header</p>
+<header class="w3-container w3-row">
+    <h1 id="banner" class="w3-col s9">Ik zoek miauw</h1>
+    <img class="w3-col s3" src="{%static 'img/tommie.jpg' %}" alt="Tommie">
 </header>
 {% with request.resolver_match.url_name as url_name %}
     <nav class="w3-bar w3-theme">
