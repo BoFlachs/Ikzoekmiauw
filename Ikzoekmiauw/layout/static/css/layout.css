@@ -1,3 +1,65 @@
-main img {
+/* General styling */
+img {
+    max-width: 100%;
+    margin-top: 3%;
+    border-radius: 25px
+}
+
+/* Styling for top of the index page */
+#index-top {
+    display: block;
+    text-align: center;
+    margin: 1%;
+    margin-bottom: 5%;
+}
+
+#index-top button{
+    position: relative;
+    right: 50px;
+    bottom: 100px;
+}
+
+#index-top img {
+    border-radius: 100%;
+}
+
+.large-button {
+    font-size:50px;
+    border-radius: 32px;
+}
+
+.large-button:hover{
+    color:#000 !important; 
+    background-color: #1b7a9f;
+}
+
+/* Styling for kat van de dags */
+#kat-van-de-dag section{
+    display: inline-flex;
+    padding: 0% 10%;
+    margin: 20px 0;
+}
+
+.card {
+    border-radius: 32px;
+    margin: 0 5%;
+    /* max-height: 20%; */
+}
+
+.card header{
+    border-top-left-radius: 32px;
+    border-top-right-radius: 32px;
+}
+
+#kat-van-de-dag > header{
+    background-color: #1b7a9f;
     border-radius: 25px;
+}
+
+#kat-van-de-dag h1 {
+    width: 40%;
+    position: relative;
+    /* left: 3%; */
+    border-radius: 25px;
+    color: black !important
 }
