@@ -53,6 +53,7 @@ img {
     border-radius: 32px;
     margin: 0 5%;
     /* max-height: 20%; */
+    position: relative;
 }
 
 .card header{
@@ -72,6 +73,14 @@ img {
     border-radius: 25px;
     color: black !important
 }
+
+.card-link {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+  }
 
 /* Styling for "Over Ons" section */
 #over-ons p{

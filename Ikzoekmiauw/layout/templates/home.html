@@ -7,8 +7,10 @@
 
 {% block content %}
     <article id="index-top">
-        <button class="w3-button w3-theme large-button 
-        w3-hover-theme">Bekijk de katten</button>
+        <a href="/katalogus/">
+            <button class="w3-button w3-theme large-button 
+            w3-hover-theme">Bekijk de katten</button>
+        </a>
         <img src="{% static 'img/tommie.jpg' %}" alt="Tommie" width="400" height="533">
     </article>
     <article id="kat-van-de-dag" class="w3-container ">
@@ -16,31 +18,34 @@
             <h1 class="w3-container w3-theme-d2">Katten van de dag</h1>
         </header>
         <section>
-            <div class="w3-card-4 w3-theme-l2 card" style="width:33%">
+            <div class="w3-card-2 w3-theme-l2 w3-hover-shadow card" style="width:33%">
                 <header class="w3-container w3-theme">
                     <h2>Tommie</h2>
                 </header>
                 <div class="w3-container">
                     <img src="{% static 'img/tommie2.jpg' %}" alt="Tommie">
                     <p>Info over Tommie</p>
+                    <a href="/katalogus/" class="card-link"></a>
                 </div>
             </div>
-            <div class="w3-card-4 w3-theme-l2 card" style="width:33%">
+            <div class="w3-card-2 w3-theme-l2 w3-hover-shadow card" style="width:33%">
                 <header class="w3-container w3-theme">
                     <h2>Tommie</h2>
                 </header>
                 <div class="w3-container">
-                <img src="{% static 'img/tommie3.jpg' %}" alt="Tommie">
-                <p>Info over Tommie</p>
+                    <img src="{% static 'img/tommie3.jpg' %}" alt="Tommie">
+                    <p>Info over Tommie</p>
+                    <a href="/katalogus/" class="card-link"></a>
+                </div>
             </div>
-            </div>
-            <div class="w3-card-4 w3-theme-l2 card" style="width:33%">
+            <div class="w3-card-2 w3-theme-l2 w3-hover-shadow card" style="width:33%">
                 <header class="w3-container w3-theme">
                     <h2>Tommie</h2>
                 </header>
                 <div class="w3-container">
                     <img src="{% static 'img/tommie2.jpg' %}" alt="Tommie">
                     <p>Info over Tommie</p>
+                    <a href="/katalogus/" class="card-link"></a>
                 </div>
             </div>
         </section> 

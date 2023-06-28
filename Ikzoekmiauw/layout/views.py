@@ -6,3 +6,6 @@ def home(request):
 
 def privacy(request):
     return render(request, "privacy.html")
+
+def ditjes(request):
+    return render(request, "ditjes.html")
