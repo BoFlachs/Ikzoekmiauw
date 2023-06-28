@@ -51,15 +51,21 @@ img {
     border-top-right-radius: 32px;
 }
 
-#kat-van-de-dag > header{
+.barred-header{
     background-color: #1b7a9f;
     border-radius: 25px;
 }
 
-#kat-van-de-dag h1 {
+.barred-header h1 {
     width: 40%;
     position: relative;
     /* left: 3%; */
     border-radius: 25px;
     color: black !important
+}
+
+/* Styling for "Over Ons" section */
+#over-ons p{
+    width: 50%;
+    text-align: justify;
 }
