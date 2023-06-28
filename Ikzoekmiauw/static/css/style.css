@@ -68,6 +68,11 @@ nav a{
     }
 }
 
+@media (min-width:720px){
+    .hide-lm{
+        display:none !important
+    }
+}
 
 /* Styling of the footer */
 footer {
@@ -81,11 +86,19 @@ footer {
 
 footer .row{
     width:100%;
-    margin:1% 0%;
-    padding:0.6% 0%;
+    /* margin:1% 0%; */
+    /* padding:0.6% 0%; */
     color:gray;
     font-size:0.8em;
     }
+
+footer .top-padded-row{
+    padding-top: 0.6%;
+}
+
+footer .bottom-padded-row{
+    padding-bottom: 0.6%;
+}
 
 footer .row a{
     text-decoration:none;
