@@ -33,6 +33,15 @@ img {
     background-color: #1b7a9f;
 }
 
+@media (max-width: 900px){
+    #index-top button{
+        position: relative;
+        right: 0;
+        bottom: 0;
+        margin-top: 20px;
+    }
+}
+
 /* Styling for kat van de dags */
 #kat-van-de-dag section{
     display: inline-flex;
@@ -68,4 +77,21 @@ img {
 #over-ons p{
     width: 50%;
     text-align: justify;
+}
+
+@media (max-width: 970px){
+    .barred-header h1{
+        width: 50%;
+    }
+}
+
+@media (max-width: 800px){
+    .barred-header h1{
+        width: 100%;
+    }
+
+    #over-ons p{
+        width:100%;
+        text-align: center;
+    }
 }

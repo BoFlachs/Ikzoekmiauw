@@ -54,6 +54,7 @@ header {
 nav {
     font-size: large;
     margin-top: -6px;
+    padding: 0 20px;
 }
 
 nav a{
