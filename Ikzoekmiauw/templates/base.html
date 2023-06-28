@@ -18,12 +18,8 @@
     {% comment %} Google font {% endcomment %}
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine">
     {% comment %} My own stylesheet that has precedence over the above {% endcomment %}
-    <link rel="stylesheet" href="{% static 'css/style.css' %}">
-    {% comment %} <link 
-        rel="preload" 
-        as="style" 
-        href="{% static 'css/style.css' %}"
-        onload="this.rel = 'stylesheet'"> {% endcomment %}
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+    {% block css %} {% endblock %}
 </head>
 <body>
     {% comment %} Include the header template {% endcomment %}

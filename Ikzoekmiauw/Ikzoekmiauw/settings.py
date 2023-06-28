@@ -132,10 +132,6 @@ STATIC_URL = "static/"
 
 STATICFILES_DIRS = [
     "static",
-    "account/static",
-    "contact/static",
-    "katalogus/static",
-    "layout/static",
 ]
 
 # Default primary key field type

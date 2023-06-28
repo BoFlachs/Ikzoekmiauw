@@ -1,6 +1,11 @@
 {% extends 'base.html' %}
 {% load static %}
 
+{%block css %}
+ <link rel="stylesheet" href="{% static 'css/layout.css' %}">
+{% endblock %}
+
 {% block content %}
-    <p>This is the main content</p>
+    <h1>Welkom op Ikzoekmiauw!</h1>
+    <img src="{% static 'img/tommie.jpg' %}" alt="Tommie" width="400" height="533">
 {% endblock %}
