@@ -17,6 +17,10 @@ class KattenView(generics.ListCreateAPIView):
     def get_queryset(self):
         qs = super(KattenView, self).get_queryset()
         return filters.KatFilterSet(data=self.request.GET, queryset=qs).filter()
+    
+class SingleKatView(generics.RetrieveUpdateDestroyAPIView):
+    queryset = Kat.objects.all()
+    serializer_class = serializers.KatSerializer
 
 class KattenSoortView(generics.ListCreateAPIView):
     ordering_fields = ['soort']
