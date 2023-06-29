@@ -83,3 +83,4 @@
 
 ## To do list
 - Add meta data to base.html
+- Add attributes to Kat modelfields
