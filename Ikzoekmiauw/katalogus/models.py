@@ -1,4 +1,5 @@
 from django.db import models
+import datetime
 
 # Create your models here.
 class Kattensoort(models.Model):
@@ -59,9 +60,35 @@ class Kat(models.Model):
     moetNaarBuiten = models.CharField(max_length=200,
                                       choices=JA_NEE_CHOICES,
                                       default=ONBEKEND)
+    # Special needs
+    BLIND = "Blind"
+    DOOF = "Doof"
+    MED = "Medicijnen"
+    GEDR = "Behandeling gedragsproblemen"
+    VOER = "Dieetvoer"
+    ZORG_CHOICES = [
+        (NEE, "Nee"),
+        (ONBEKEND, "Onbekend"),
+        (BLIND, "Blind"),
+        (DOOF, "Doof"),
+        (MED, "Medicijnen"),
+        (GEDR, "Behandeling gedragsproblemen"),
+        (VOER, "Dieetvoer"),
+    ]
+    
+    specialeZorg = models.CharField(max_length=200,
+                                    choices=ZORG_CHOICES,
+                                    default=ONBEKEND)
      
     # Picture of the cat
     foto = models.ImageField(upload_to="photos/%Y/%m/%d", null=True)
+    
+    # Available from
+    beschikbaarVanaf = models.DateField(default=datetime.date.today)
+    
+    # Location
+    locatie = models.CharField(max_length=40,
+                               null=True)
     
     def __str__(self):
         return self.naam
