@@ -1,12 +1,15 @@
 from django.shortcuts import render
 from .models import Kat, Kattensoort
 from rest_framework import generics
+from django.core import serializers as ser
 from . import serializers
 from . import filters
 
 # Create your views here.
 def katalogus(request):
-    return render(request, 'katalogus.html')
+    katten = Kat.objects.all()
+    katten_json = ser.serialize('json', katten)
+    return render(request, 'katalogus.html', {"katten": katten_json})
 
 class KattenView(generics.ListCreateAPIView):
     ordering_fields = ['naam']
