@@ -146,6 +146,7 @@ REST_FRAMEWORK = {
     'DEFAULT_FILTER_BACKENDS': [
         'rest_framework.filters.OrderingFilter',
         'rest_framework.filters.SearchFilter',
+        # 'url_filter.integrations.drf.DjangoFilterBackend',
     ],
     # Defines how many instances of a class are given in the APIs
     'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
@@ -157,6 +158,7 @@ REST_FRAMEWORK = {
         # This is only for Djoser 
         'rest_framework.authentication.SessionAuthentication'
     ],
+
     
     # Throttling for preventing malicious requests 
     # 'DEFAULT_THROTTLE_RATES': {
