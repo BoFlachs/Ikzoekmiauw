@@ -1,6 +1,10 @@
-from url_filter.filtersets import ModelFilterSet
+import django_filters
 from . import models
-
-class KatFilterSet(ModelFilterSet):
-    class Meta(object):
+        
+class KatFilter(django_filters.FilterSet):
+    class Meta:
         model = models.Kat
+        fields = [
+                    'soort', 
+                    'geslacht', 
+                    'kanBijKinderen']

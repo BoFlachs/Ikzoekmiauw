@@ -10,6 +10,7 @@ djangorestframework-xml = "*"
 djoser = "*"
 pillow = "*"
 django-url-filter = "*"
+django-filter = "*"
 
 [dev-packages]
 

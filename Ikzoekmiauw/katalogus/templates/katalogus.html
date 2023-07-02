@@ -6,11 +6,45 @@
 {% endblock %}
 
 {% block content %}
-    <pre id="katten"></pre>
+    <div>
+        <div>
+            <a href="{% url 'katalogus' %}">Clear Filters</a>
+            <form method="get">
+                <div style="display: grid"> 
+                    {% for field in filter.form %}
+                        <div id="form-field-{{ forloop.counter0 }}">
+                            {{ field.label_tag }}
+                            {{ field }}
+                        </div>
+                    {% endfor %}
+                </div>
+                <button type="submit" class="w3-button w3-theme w3-hover-theme">Filter</button>
+            </form>
+        </div>
+        <div>
+            <table>
+                <thead>
+                  <tr>
+                    <th>#</th>
+                    <th>Naam</th>
+                    <th>Soort</th>
+                    <th>Geslacht</th>
+                    <th>Kan bij kinderen</th>
+                  </tr>
+                </thead>
+                <tbody>
+                    {% for kat in filter.qs %}
+                    <tr>
+                        <th>{{ forloop.counter }}</th>
+                        <td>{{ kat.naam }}</td>
+                        <td>{{ kat.soort }}</td>
+                        <td>{{ kat.geslacht }}</td>
+                        <td>{{ kat.kanBijKinderen }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table> 
+        </div>
+    </div> 
 
-    <script>
-        const katten = JSON.parse('{{ katten|safe }}')
-        const pretty_json = JSON.stringify(katten,null,2)
-        document.getElementById('katten').innerHTML = pretty_json
-      </script>
 {% endblock %}
