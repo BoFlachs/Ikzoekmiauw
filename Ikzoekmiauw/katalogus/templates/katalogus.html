@@ -8,7 +8,7 @@
 {% block content %}
     <div>
         <div>
-            <a href="{% url 'katalogus' %}">Clear Filters</a>
+            <a href="{% url 'katalogus' %}">Reset filter</a>
             <form method="get">
                 <div style="display: grid"> 
                     {% for field in filter.form %}

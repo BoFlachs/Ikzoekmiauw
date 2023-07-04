@@ -18,8 +18,8 @@ class Kat(models.Model):
                                to_field="soort", default="Overig")
     
     # Several choices for the sex of the cat
-    MAN = "Man"
-    VROUW = "Vrouw"
+    MAN = "Mannelijk"
+    VROUW = "Vrouwelijk"
     ONBEKEND = "Onbekend"
     GESLACHT_CHOICES = [
         (MAN, "Mannelijk"),
@@ -92,3 +92,11 @@ class Kat(models.Model):
     
     def __str__(self):
         return self.naam
+    
+    def save(self, *args, **kwargs):
+        try:
+            this = Kat.objects.get(id=self.id)
+            if not(self.foto):
+                self.foto = this.foto
+        except: pass
+        super(Kat, self).save(*args, **kwargs)
