@@ -135,7 +135,7 @@ STATICFILES_DIRS = [
     "static",
 ]
 
-MEDIA_ROOT = "katalogus/user_media/"
+MEDIA_ROOT = "katalogus/static/user_media/"
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field

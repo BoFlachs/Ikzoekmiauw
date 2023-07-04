@@ -21,30 +21,20 @@
                 <button type="submit" class="w3-button w3-theme w3-hover-theme">Filter</button>
             </form>
         </div>
-        <div>
-            <table>
-                <thead>
-                  <tr>
-                    <th>#</th>
-                    <th>Naam</th>
-                    <th>Soort</th>
-                    <th>Geslacht</th>
-                    <th>Kan bij kinderen</th>
-                  </tr>
-                </thead>
-                <tbody>
-                    {% for kat in filter.qs %}
-                    <tr>
-                        <th>{{ forloop.counter }}</th>
-                        <td>{{ kat.naam }}</td>
-                        <td>{{ kat.soort }}</td>
-                        <td>{{ kat.geslacht }}</td>
-                        <td>{{ kat.kanBijKinderen }}</td>
-                    </tr>
-                    {% endfor %}
-                </tbody>
-            </table> 
-        </div>
+        <section id="katlist">
+            {% for kat in filter.qs %}
+            <div class="w3-card-2 w3-theme-l2 w3-hover-shadow card">
+                <header class="w3-container w3-theme">
+                    <h2>{{kat.naam}}</h2>
+                </header>
+                <div class="w3-container">
+                    <img src="{% static 'user_media/' %}{{kat.foto}}">
+                    <p>{{kat.geslacht}}, {{kat.locatie}}</p>
+                    <a href="/katalogus/api/katten/{{kat.id}}" class="card-link"></a>
+                </div>
+            </div>
+            {% endfor %}
+        </section>
     </div> 
 
 {% endblock %}

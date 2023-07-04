@@ -1,0 +1,36 @@
+/* General styling */
+img {
+    max-width: 100%;
+    margin-top: 3%;
+    border-radius: 25px
+}
+
+/* List of cats styling */
+#katlist{
+    display: grid;
+    grid-template-columns: 25% 25% 25%;
+    /* padding: 0% 10%; */
+    margin: 20px 0;
+    justify-content: space-evenly;
+}
+
+/* Card styling */
+.card {
+    border-radius: 32px;
+    margin: 20px 5%;
+    /* max-height: 20%; */
+    position: relative;
+}
+
+.card header{
+    border-top-left-radius: 32px;
+    border-top-right-radius: 32px;
+}
+
+.card-link {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+  }
