@@ -1,0 +1,66 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block css %}
+ <link rel="stylesheet" href="{% static 'css/kat.css' %}">
+{% endblock %}
+
+{% block content %}
+<section>
+    <article id="profiel" class="w3-container">
+        <h2>{{kat.naam}}</h2>
+        <img src="{% static 'user_media/' %}{{kat.foto}}">
+        <p>{{kat.beschrijving}}</p>
+        <table class="table">
+            <thead>
+              <tr>
+                <th>Kenmerken</ th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Soort</td>
+                    <td>{{kat.soort}}</td>
+                </tr>
+                <tr>
+                    <td>Geslacht</td>
+                    <td>{{kat.geslacht}}</td>
+                </tr>
+                <tr>
+                    <td>Leeftijd</td>
+                    <td>{{kat.leeftijd}}</td>
+                </tr>
+                <tr>
+                    <td>Kan bij kinderen</td>
+                    <td>{{kat.kanBijKinderen}}</td>
+                </tr>
+                <tr>
+                    <td>Kan bij honden</td>
+                    <td>{{kat.kanBijHonden}}</td>
+                </tr>
+                <tr>
+                    <td>Kan bij katten</td>
+                    <td>{{kat.kanBijKatten}}</td>
+                </tr>
+                <tr>
+                    <td>Speciale zorg</td>
+                    <td>{{kat.specialeZorg}}</td>
+                </tr>
+                <tr>
+                    <td>Gecastreerd/gesteriliseerd</td>
+                    <td>{{kat.gecastreerd}}</td>
+                </tr>
+                <tr>
+                    <td>Locatie</td>
+                    <td>{{kat.locatie}}</td>
+                </tr>
+                <tr>
+                    <td>Beschikbaar vanaf</td>
+                    <td>{{kat.beschikbaarVanaf}}</td>
+                </tr>
+            </tbody>
+        </table> 
+    </article>
+
+</section>
+{% endblock %}

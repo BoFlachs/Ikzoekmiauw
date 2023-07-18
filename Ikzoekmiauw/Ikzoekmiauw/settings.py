@@ -150,7 +150,7 @@ REST_FRAMEWORK = {
     ],
     # Defines how many instances of a class are given in the APIs
     'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
-    'PAGE_SIZE' : 6,
+    'PAGE_SIZE' : 4,
     
     # Authentication
     'DEFAULT_AUTHENTICATION_CLASSES': [

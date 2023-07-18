@@ -15,6 +15,6 @@ class KatFilter(django_filters.FilterSet):
                     'kanBijKatten',
                     'moetNaarBuiten',
                     'specialeZorg',
-                    'locatie',
-                    'beschikbaarVanaf',
+                    # 'locatie',
+                    # 'beschikbaarVanaf',
                     ]

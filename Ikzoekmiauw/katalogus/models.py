@@ -60,6 +60,11 @@ class Kat(models.Model):
     moetNaarBuiten = models.CharField(max_length=200,
                                       choices=JA_NEE_CHOICES,
                                       default=ONBEKEND)
+    
+    gecastreerd = models.CharField(max_length=200,
+                                   choices = JA_NEE_CHOICES,
+                                   default=ONBEKEND)
+    
     # Special needs
     BLIND = "Blind"
     DOOF = "Doof"
@@ -89,6 +94,9 @@ class Kat(models.Model):
     # Location
     locatie = models.CharField(max_length=40,
                                null=True)
+   
+    # Description
+    beschrijving = models.CharField(max_length=4000, null=True)
     
     def __str__(self):
         return self.naam

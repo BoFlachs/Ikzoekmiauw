@@ -10,8 +10,9 @@ from . import filters
 class KattenListView(FilterView):
     model = Kat
     template_name = "katalogus.html"
-    paginate_by = 6
+    # paginate_by = 6
     filterset_class = filters.KatFilter
+    ordering_fields = ['soort']
     
 # def katalogus(request):
 #     katten = Kat.objects.all()
@@ -22,6 +23,10 @@ class KattenView(generics.ListCreateAPIView):
     ordering_fields = ['naam']
     queryset = Kat.objects.all()
     serializer_class = serializers.KatSerializer
+    
+def kat(request, pk):
+    kat = Kat.objects.get(pk=pk)
+    return render(request, 'kat.html', {'kat': kat})
         
     
 class SingleKatView(generics.RetrieveUpdateDestroyAPIView):

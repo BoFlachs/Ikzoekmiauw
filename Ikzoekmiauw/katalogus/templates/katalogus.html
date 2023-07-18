@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 {% load static %}
 
-{%block css %}
+{% block css %}
  <link rel="stylesheet" href="{% static 'css/katalogus.css' %}">
 {% endblock %}
 
@@ -30,7 +30,7 @@
                 <div class="w3-container">
                     <img src="{% static 'user_media/' %}{{kat.foto}}">
                     <p>{{kat.geslacht}}, {{kat.locatie}}</p>
-                    <a href="/katalogus/api/katten/{{kat.id}}" class="card-link"></a>
+                    <a href="/katalogus/{{kat.id}}" class="card-link"></a>
                 </div>
             </div>
             {% endfor %}

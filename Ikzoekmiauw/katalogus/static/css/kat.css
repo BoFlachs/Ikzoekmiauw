@@ -1,0 +1,11 @@
+/* General styling */
+img {
+    max-width: 20%;
+
+    border-radius: 25px
+}
+
+/* Styling of cat profile */
+#profiel {
+    display: block;
+}
