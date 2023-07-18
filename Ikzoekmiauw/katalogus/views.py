@@ -10,9 +10,8 @@ from . import filters
 class KattenListView(FilterView):
     model = Kat
     template_name = "katalogus.html"
-    # paginate_by = 6
+    paginate_by = 6
     filterset_class = filters.KatFilter
-    ordering_fields = ['soort']
     
 # def katalogus(request):
 #     katten = Kat.objects.all()

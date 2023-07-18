@@ -108,3 +108,6 @@ class Kat(models.Model):
                 self.foto = this.foto
         except: pass
         super(Kat, self).save(*args, **kwargs)
+        
+    class Meta:
+        ordering = ['id']
